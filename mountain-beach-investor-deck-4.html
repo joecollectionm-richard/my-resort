@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mountain Beach Resort Pattaya – Investment Opportunity</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --gold:#C9A84C;
+  --gold-light:#E8C97A;
+  --gold-pale:#F5E9C8;
+  --navy:#0A1628;
+  --navy-mid:#112240;
+  --navy-light:#1A3A6A;
+  --cream:#FAF7F0;
+  --lime:#AEEA00;
+  --lime-btn:#B8F000;
+  --white:#FFFFFF;
+  --text-dark:#1A1A2E;
+  --text-mid:#4A5568;
+  --glass:rgba(255,255,255,0.07);
+  --glass-border:rgba(201,168,76,0.3);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--navy);
+  color:var(--white);
+  overflow-x:hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--navy);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 48px;
+  background:rgba(10,22,40,0.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--glass-border);
+}
+.nav-logo{
+  font-family:'Playfair Display',serif;
+  font-size:22px;font-weight:900;
+  letter-spacing:2px;color:var(--gold);
+}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{
+  font-size:12px;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(255,255,255,0.7);text-decoration:none;
+  transition:color .3s;
+}
+.nav-links a:hover{color:var(--gold);}
+
+/* ── JOE COLLECTION LOGO (top right) ── */
+.joe-logo{
+  font-family:'Playfair Display',serif;
+  font-size:13px;font-weight:700;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);
+  border:1px solid var(--gold);
+  padding:6px 14px;border-radius:3px;
+  white-space:nowrap;
+}
+
+/* ── HERO ── */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:120px 48px 80px;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(135deg, rgba(10,22,40,0.97) 0%, rgba(10,22,40,0.82) 50%, rgba(17,34,64,0.92) 100%),
+    url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1600&q=80') center/cover no-repeat;
+}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.12) 0%, transparent 60%);
+}
+.hero-grid-line{
+  position:absolute;top:0;bottom:0;
+  width:1px;background:linear-gradient(to bottom, transparent, rgba(201,168,76,0.2), transparent);
+}
+.hero-grid-line:nth-child(1){left:25%;}
+.hero-grid-line:nth-child(2){left:50%;}
+.hero-grid-line:nth-child(3){left:75%;}
+
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:11px;letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:24px;
+}
+.hero-eyebrow::before,.hero-eyebrow::after{
+  content:'';display:block;width:40px;height:1px;background:var(--gold);
+}
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,6vw,86px);font-weight:900;
+  line-height:1.05;
+  background:linear-gradient(135deg,#fff 0%,var(--gold-light) 50%,#fff 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:20px;
+}
+.hero-subtitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-style:italic;
+  color:rgba(255,255,255,0.75);
+  margin-bottom:40px;max-width:680px;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:50px;}
+.hero-tag{
+  padding:8px 18px;border:1px solid rgba(201,168,76,0.5);
+  border-radius:20px;font-size:12px;letter-spacing:1px;
+  color:var(--gold-light);background:rgba(201,168,76,0.08);
+}
+.hero-cta-row{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+.btn-primary{
+  background:var(--gold);color:var(--navy);
+  padding:14px 36px;border-radius:4px;
+  font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  border:none;cursor:pointer;text-decoration:none;
+  transition:all .3s;display:inline-block;
+}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.4);}
+.btn-outline{
+  background:transparent;color:var(--white);
+  padding:14px 36px;border-radius:4px;
+  font-size:13px;font-weight:500;letter-spacing:2px;text-transform:uppercase;
+  border:1px solid rgba(255,255,255,0.3);cursor:pointer;text-decoration:none;
+  transition:all .3s;display:inline-block;
+}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+
+/* ── STAT STRIP ── */
+.stat-strip{
+  background:rgba(201,168,76,0.08);
+  border-top:1px solid var(--glass-border);
+  border-bottom:1px solid var(--glass-border);
+  padding:28px 48px;
+  display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px;
+}
+.stat-item{text-align:center;}
+.stat-val{
+  font-family:'Playfair Display',serif;
+  font-size:32px;font-weight:900;color:var(--gold);
+  display:block;
+}
+.stat-label{
+  font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(255,255,255,0.6);margin-top:4px;display:block;
+}
+
+/* ── SECTIONS ── */
+section{padding:100px 48px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-label{
+  font-size:11px;letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;display:block;
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(32px,4vw,52px);font-weight:700;
+  line-height:1.15;margin-bottom:16px;
+}
+.section-line{
+  width:60px;height:2px;background:var(--gold);margin-bottom:40px;
+}
+.section-desc{
+  font-size:16px;line-height:1.8;
+  color:rgba(255,255,255,0.75);max-width:720px;
+}
+
+/* ── PROPERTY OVERVIEW ── */
+.overview-section{background:var(--navy-mid);}
+.overview-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:48px;align-items:start;margin-top:56px;
+}
+.property-image-wrap{
+  position:relative;border-radius:8px;overflow:hidden;
+}
+.property-image-wrap img{
+  width:100%;height:420px;object-fit:cover;display:block;
+  filter:brightness(0.95);
+}
+.property-image-overlay{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top, rgba(10,22,40,0.9), transparent);
+  padding:28px 24px 20px;
+}
+.property-image-badge{
+  display:inline-block;
+  background:var(--gold);color:var(--navy);
+  padding:6px 16px;border-radius:3px;
+  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+}
+.info-cards{display:flex;flex-direction:column;gap:16px;}
+.info-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:8px;padding:20px 24px;
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+}
+.info-row{display:flex;flex-direction:column;gap:4px;}
+.info-key{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);opacity:.8;}
+.info-val{font-size:15px;font-weight:500;color:var(--white);}
+
+/* ── LOCATION MAP CARD ── */
+.location-card{
+  background:linear-gradient(135deg, rgba(201,168,76,0.1), rgba(17,34,64,0.8));
+  border:1px solid var(--glass-border);
+  border-radius:8px;padding:24px;margin-top:16px;
+}
+.location-title{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.neighbor-list{list-style:none;}
+.neighbor-list li{
+  padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.08);
+  font-size:14px;color:rgba(255,255,255,0.8);
+  display:flex;align-items:center;gap:10px;
+}
+.neighbor-list li:last-child{border-bottom:none;}
+.neighbor-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+
+/* ── MARKET CONTEXT ── */
+.market-section{background:var(--navy);}
+.market-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;
+}
+.market-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:10px;padding:32px 28px;
+  position:relative;overflow:hidden;
+}
+.market-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+}
+.market-card-icon{font-size:32px;margin-bottom:16px;display:block;}
+.market-card-val{
+  font-family:'Playfair Display',serif;
+  font-size:38px;font-weight:900;color:var(--gold);
+  display:block;margin-bottom:8px;
+}
+.market-card-label{
+  font-size:12px;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(255,255,255,0.6);margin-bottom:12px;display:block;
+}
+.market-card-desc{font-size:14px;line-height:1.7;color:rgba(255,255,255,0.7);}
+
+/* ── BEFORE / AFTER ── */
+.reposition-section{
+  background:var(--navy-mid);
+  position:relative;overflow:hidden;
+}
+.reposition-section::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 50%,rgba(201,168,76,0.07) 0%,transparent 65%);
+}
+.before-after{
+  display:grid;grid-template-columns:1fr 60px 1fr;
+  gap:0;align-items:stretch;margin-top:56px;
+}
+.ba-col{border-radius:12px;overflow:hidden;position:relative;}
+.ba-header{padding:20px 28px;font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:600;}
+.ba-before .ba-header{background:#2D2D2D;color:#aaa;}
+.ba-after .ba-header{background:linear-gradient(90deg,var(--gold),#a07820);color:var(--navy);}
+.ba-body{padding:28px;}
+.ba-before .ba-body{background:#1E1E1E;}
+.ba-after .ba-body{background:rgba(201,168,76,0.06);border:1px solid var(--glass-border);}
+.ba-metric{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+.ba-metric:last-child{border-bottom:none;}
+.ba-metric-name{font-size:13px;color:rgba(255,255,255,0.65);}
+.ba-metric-val{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;}
+.ba-before .ba-metric-val{color:#e57373;}
+.ba-after .ba-metric-val{color:var(--lime);}
+.ba-divider{
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.ba-arrow{
+  background:var(--gold);
+  width:48px;height:48px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-weight:700;color:var(--navy);
+  box-shadow:0 0 30px rgba(201,168,76,0.5);
+  z-index:2;
+}
+.ba-label{
+  text-align:center;
+  font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);margin-top:12px;position:absolute;top:60px;
+  white-space:nowrap;
+}
+.uplift-badges{display:flex;gap:16px;flex-wrap:wrap;margin-top:32px;}
+.uplift-badge{
+  background:rgba(174,234,0,0.12);
+  border:1px solid rgba(174,234,0,0.4);
+  border-radius:6px;padding:14px 20px;
+  flex:1;min-width:160px;
+}
+.uplift-pct{
+  font-family:'Playfair Display',serif;
+  font-size:28px;font-weight:900;color:var(--lime);
+  display:block;
+}
+.uplift-desc{font-size:11px;letter-spacing:1px;color:rgba(255,255,255,0.65);margin-top:4px;}
+
+/* ── FINANCIAL MODEL ── */
+.finance-section{background:var(--navy);}
+.finance-table-wrap{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:12px;overflow:hidden;margin-top:48px;
+}
+.finance-table{width:100%;border-collapse:collapse;}
+.finance-table th{
+  background:rgba(201,168,76,0.15);
+  padding:16px 24px;font-size:11px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--gold);text-align:left;
+}
+.finance-table td{
+  padding:15px 24px;font-size:14px;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  color:rgba(255,255,255,0.85);
+}
+.finance-table tr:last-child td{border-bottom:none;}
+.finance-table tr:hover td{background:rgba(201,168,76,0.04);}
+.td-right{text-align:right;}
+.td-gold{color:var(--gold);font-weight:600;}
+.td-lime{color:var(--lime);font-weight:700;}
+.td-bold{font-weight:700;color:var(--white);}
+.tr-total td{
+  background:rgba(201,168,76,0.1);
+  border-top:2px solid var(--gold);
+  font-weight:700;font-size:15px;
+}
+
+/* ── EXIT STRATEGY ── */
+.exit-section{background:var(--navy-mid);}
+.exit-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;
+}
+.exit-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:12px;padding:36px 32px;
+  position:relative;
+}
+.exit-card-title{
+  font-family:'Playfair Display',serif;
+  font-size:22px;font-weight:700;color:var(--gold);margin-bottom:20px;
+}
+.exit-rows{display:flex;flex-direction:column;gap:14px;}
+.exit-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.exit-row:last-child{border-bottom:none;}
+.exit-key{font-size:13px;color:rgba(255,255,255,0.65);}
+.exit-val{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--white);}
+.exit-val.highlight{color:var(--lime);}
+.exit-val.gold{color:var(--gold);}
+
+/* ── REPLACEMENT COST ── */
+.replace-section{background:var(--navy);}
+.replace-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px;
+}
+.replace-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:10px;padding:28px;
+}
+.replace-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:8px;}
+.replace-val{
+  font-family:'Playfair Display',serif;
+  font-size:26px;font-weight:900;color:var(--white);
+}
+.replace-sub{font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;}
+
+/* ── ASKING PRICE HERO ── */
+.asking-section{
+  background:linear-gradient(135deg,var(--navy-mid),var(--navy));
+  border-top:1px solid var(--glass-border);
+  padding:80px 48px;text-align:center;
+}
+.asking-section .section-inner{max-width:900px;}
+.asking-eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:20px;}
+.asking-label{
+  font-family:'Playfair Display',serif;
+  font-size:20px;color:rgba(255,255,255,0.7);margin-bottom:24px;
+}
+.asking-price-btn{
+  display:inline-block;
+  background:var(--lime-btn);color:#1A2800;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,6vw,76px);font-weight:900;
+  padding:20px 56px;border-radius:8px;
+  letter-spacing:2px;
+  box-shadow:0 0 60px rgba(174,234,0,0.35),0 20px 60px rgba(0,0,0,0.4);
+  margin:0 auto;display:inline-block;
+}
+.asking-note{
+  margin-top:28px;font-size:15px;
+  color:rgba(255,255,255,0.6);
+  font-style:italic;font-family:'Cormorant Garamond',serif;
+}
+.land-cost-highlight{
+  display:inline-block;
+  background:var(--lime-btn);color:#1A2800;
+  font-weight:700;font-size:14px;
+  padding:4px 14px;border-radius:4px;
+  margin:0 4px;
+}
+
+/* ── INVESTMENT THESIS ── */
+.thesis-section{background:var(--navy-mid);}
+.thesis-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;
+}
+.thesis-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:10px;padding:32px 24px;
+  border-top:3px solid var(--gold);
+}
+.thesis-num{
+  font-family:'Playfair Display',serif;
+  font-size:48px;font-weight:900;
+  color:rgba(201,168,76,0.2);margin-bottom:8px;display:block;
+}
+.thesis-title{font-size:16px;font-weight:700;color:var(--gold);margin-bottom:12px;}
+.thesis-desc{font-size:14px;line-height:1.8;color:rgba(255,255,255,0.7);}
+
+/* ── REVIEWS ── */
+.reviews-section{background:var(--navy);}
+.reviews-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;
+}
+.review-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:10px;padding:28px 24px;position:relative;
+}
+.review-quote{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;font-style:italic;line-height:1.8;
+  color:rgba(255,255,255,0.8);margin-bottom:20px;
+}
+.review-quote::before{
+  content:'"';font-size:48px;line-height:.8;
+  color:var(--gold);display:block;margin-bottom:8px;font-style:normal;
+}
+.review-author{font-size:12px;letter-spacing:1px;color:var(--gold);}
+.review-stars{color:#FFD700;font-size:14px;margin-bottom:8px;}
+.review-source{font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;}
+
+/* ── CONTACT ── */
+.contact-section{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);
+  border-top:1px solid var(--glass-border);
+}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+  margin-top:56px;
+}
+.contact-info{display:flex;flex-direction:column;gap:24px;}
+.contact-row{display:flex;gap:16px;align-items:flex-start;}
+.contact-icon{
+  width:44px;height:44px;border-radius:8px;
+  background:rgba(201,168,76,0.15);border:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;flex-shrink:0;
+}
+.contact-row-body{}
+.contact-row-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.contact-row-val{font-size:16px;color:var(--white);}
+.contact-disclaimer{
+  background:rgba(201,168,76,0.06);border:1px solid var(--glass-border);
+  border-radius:10px;padding:28px;
+  font-size:13px;line-height:1.8;color:rgba(255,255,255,0.6);
+}
+.contact-disclaimer strong{color:var(--gold);}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--navy);
+  border-top:1px solid var(--glass-border);
+  padding:32px 48px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+}
+.footer-brand{
+  font-family:'Playfair Display',serif;
+  font-size:18px;font-weight:900;color:var(--gold);letter-spacing:2px;
+}
+.footer-text{font-size:12px;color:rgba(255,255,255,0.4);}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes shimmer{
+  0%{background-position:-200% center;}
+  100%{background-position:200% center;}
+}
+.hero-title{
+  animation:fadeUp .9s ease both;
+}
+.hero-subtitle{animation:fadeUp .9s .2s ease both;}
+.hero-tags{animation:fadeUp .9s .35s ease both;}
+.hero-cta-row{animation:fadeUp .9s .5s ease both;}
+.stat-strip{animation:fadeUp .9s .6s ease both;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:16px 24px;}
+  .hero{padding:100px 24px 60px;}
+  section{padding:60px 24px;}
+  .overview-grid,.before-after{grid-template-columns:1fr;}
+  .before-after{grid-template-columns:1fr;}
+  .ba-divider{display:none;}
+  .market-cards,.thesis-grid,.reviews-grid{grid-template-columns:1fr;}
+  .exit-grid,.replace-grid,.contact-grid{grid-template-columns:1fr;}
+  .stat-strip{padding:20px 24px;}
+  footer{padding:24px;}
+  .nav-links{display:none;}
+}
+
+/* ── CHART BARS ── */
+.chart-wrap{margin-top:48px;}
+.chart-title{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;}
+.bar-chart{display:flex;align-items:flex-end;gap:16px;height:220px;border-bottom:1px solid rgba(255,255,255,0.15);padding-bottom:0;}
+.bar-group{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;}
+.bar-pair{display:flex;gap:6px;align-items:flex-end;height:200px;}
+.bar{
+  width:36px;border-radius:4px 4px 0 0;
+  display:flex;align-items:flex-end;justify-content:center;
+  padding-bottom:6px;
+  transition:all .3s;
+  position:relative;
+}
+.bar:hover{filter:brightness(1.2);}
+.bar-label-top{
+  position:absolute;top:-24px;left:50%;transform:translateX(-50%);
+  font-size:11px;font-weight:600;white-space:nowrap;
+}
+.bar.before{background:#3A4A6A;}
+.bar.after{background:linear-gradient(to top,var(--gold),var(--gold-light));}
+.bar-group-label{font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:1px;text-align:center;}
+.chart-legend{display:flex;gap:20px;margin-top:12px;}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.6);}
+.legend-dot{width:12px;height:12px;border-radius:2px;}
+.ld-before{background:#3A4A6A;}
+.ld-after{background:var(--gold);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MOUNTAIN BEACH</div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#market">Market</a>
+    <a href="#reposition">Reposition</a>
+    <a href="#financials">Financials</a>
+    <a href="#exit">Exit Strategy</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="joe-logo">JOE COLLECTION</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid-line"></div>
+    <div class="hero-grid-line"></div>
+    <div class="hero-grid-line"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Exclusive Investment Opportunity · Pattaya, Thailand</div>
+    <h1 class="hero-title">Mountain Beach<br/>Resort Pattaya</h1>
+    <p class="hero-subtitle">
+      A rare freehold acquisition on prestigious Pratumnak Hill — primed for international rebranding and dramatic value uplift in one of Southeast Asia's fastest-growing resort markets.
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">🏨 318 Keys · Freehold</span>
+      <span class="hero-tag">📍 Pratumnak Hill · Gulf of Siam Views</span>
+      <span class="hero-tag">🏷️ Asking: ฿900 Million</span>
+      <span class="hero-tag">🔄 Holiday Inn Rebranding Candidate</span>
+      <span class="hero-tag">📈 3.1× Revenue Potential</span>
+    </div>
+    <div class="hero-cta-row">
+      <a class="btn-primary" href="#financials">View Financial Model</a>
+      <a class="btn-outline" href="#contact">Request Information</a>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<div class="stat-strip">
+  <div class="stat-item">
+    <span class="stat-val">318</span>
+    <span class="stat-label">Keys (Freehold)</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">19,302</span>
+    <span class="stat-label">sqm GFA</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">฿900M</span>
+    <span class="stat-label">Asking Price</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">฿1.7B</span>
+    <span class="stat-label">Replacement Cost</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">47%</span>
+    <span class="stat-label">Discount to Replacement</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">฿198M</span>
+    <span class="stat-label">Stabilised NOI</span>
+  </div>
+</div>
+
+<!-- PROPERTY OVERVIEW -->
+<section class="overview-section" id="overview">
+  <div class="section-inner">
+    <span class="section-label">Property Overview</span>
+    <h2 class="section-title">A Landmark Asset on<br/>Thailand's Riviera</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">
+      Mountain Beach Resort &amp; Convention Center Pattaya is an established, full-service hotel commanding panoramic views of the Gulf of Siam from Pratumnak Hill — Pattaya's most sought-after address, flanked by internationally renowned luxury resorts. Operated since 1989 by Destination Hospitality Management Co. Ltd, the asset presents a once-in-a-generation opportunity to acquire a structurally sound, income-generating hotel at a deep discount to replacement cost.
+    </p>
+
+    <div class="overview-grid">
+      <div>
+        <div class="property-image-wrap">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80" alt="Mountain Beach Resort Pattaya – Gulf of Siam views"/>
+          <div class="property-image-overlay">
+            <span class="property-image-badge">Gulf of Siam · Pratumnak Hill · Pattaya</span>
+          </div>
+        </div>
+        <div class="location-card" style="margin-top:20px;">
+          <div class="location-title">📍 Neighbourhood – Prestigious Surroundings</div>
+          <ul class="neighbor-list">
+            <li><span class="neighbor-dot"></span>Royal Cliff Beach Hotel Group — 5★ Iconic Landmark (&lt;500m)</li>
+            <li><span class="neighbor-dot"></span>InterContinental Pattaya Resort by IHG — 5★ Luxury (&lt;700m)</li>
+            <li><span class="neighbor-dot"></span>Cozy Beach — Private Beach Access (Walking Distance)</li>
+            <li><span class="neighbor-dot"></span>Pattaya Exhibition &amp; Convention Hall — 1 km</li>
+            <li><span class="neighbor-dot"></span>U-Tapao International Airport — 50 km (EEC Hub)</li>
+            <li><span class="neighbor-dot"></span>Walking Street Pattaya — 2.4 km</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="info-row"><span class="info-key">Property Name</span><span class="info-val">Mountain Beach Resort &amp; Convention Center</span></div>
+          <div class="info-row"><span class="info-key">Operator</span><span class="info-val">Destination Hospitality Management Co. Ltd</span></div>
+        </div>
+        <div class="info-card">
+          <div class="info-row"><span class="info-key">Address</span><span class="info-val">378/16 Moo 12, Nongpure, Banglamung, Chonburi</span></div>
+          <div class="info-row"><span class="info-key">Year Built</span><span class="info-val">1989 (36 Years of Operation)</span></div>
+        </div>
+        <div class="info-card">
+          <div class="info-row"><span class="info-key">Total Keys</span><span class="info-val">318 Keys (8 Storeys)</span></div>
+          <div class="info-row"><span class="info-key">Tenure</span><span class="info-val">Freehold ✓</span></div>
+        </div>
+        <div class="info-card">
+          <div class="info-row"><span class="info-key">Site Area</span><span class="info-val">5 Rai / 8,000 sqm</span></div>
+          <div class="info-row"><span class="info-key">GFA</span><span class="info-val">19,302 sqm</span></div>
+        </div>
+        <div class="info-card">
+          <div class="info-row"><span class="info-key">F&amp;B Outlets</span><span class="info-val">4 Outlets (incl. Seaview Restaurant)</span></div>
+          <div class="info-row"><span class="info-key">Meeting Space</span><span class="info-val">1,726 sqm · 3 Meeting Rooms</span></div>
+        </div>
+        <div class="info-card">
+          <div class="info-row"><span class="info-key">Facilities</span><span class="info-val">Pools · Fitness · Spa · Convention Centre</span></div>
+          <div class="info-row"><span class="info-key">Star Rating</span><span class="info-val">4-Star (Upgradeable to 4.5★ / Holiday Inn)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET CONTEXT -->
+<section class="market-section" id="market">
+  <div class="section-inner">
+    <span class="section-label">Market Intelligence · 2025–2026</span>
+    <h2 class="section-title">Why Pattaya. Why Now.</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">
+      Pattaya is undergoing a structural transformation — from budget beach resort to a MICE-driven, upper-midscale destination supercharged by Eastern Economic Corridor (EEC) infrastructure. Branded hotels are winning decisively.
+    </p>
+    <div class="market-cards">
+      <div class="market-card">
+        <span class="market-card-icon">📊</span>
+        <span class="market-card-val">฿3,498</span>
+        <span class="market-card-label">Pattaya Market ADR · 2024</span>
+        <p class="market-card-desc">Pattaya's 2024 average daily rate across all classes. Branded upper-midscale properties (Holiday Inn-tier) achieved significantly higher ADRs of ฿4,000+, demonstrating the premium IHG branding commands in this market.</p>
+      </div>
+      <div class="market-card">
+        <span class="market-card-icon">🛏️</span>
+        <span class="market-card-val">71%</span>
+        <span class="market-card-label">Average Occupancy · Pattaya 2024</span>
+        <p class="market-card-desc">The market achieved 71% occupancy with 31,581 keys across 141 properties. Branded hotels with loyalty programmes (IHG One Rewards) consistently outperform independents — projecting 80% post-rebranding.</p>
+      </div>
+      <div class="market-card">
+        <span class="market-card-icon">✈️</span>
+        <span class="market-card-val">EEC</span>
+        <span class="market-card-label">Eastern Economic Corridor Catalyst</span>
+        <p class="market-card-desc">U-Tapao Airport expansion and EEC industrial investment are driving sustained corporate MICE demand. Pattaya is actively pivoting from leisure to a dual leisure-MICE destination, benefiting convention-capable properties.</p>
+      </div>
+      <div class="market-card">
+        <span class="market-card-icon">🏷️</span>
+        <span class="market-card-val">+10.7%</span>
+        <span class="market-card-label">APAC Visitor Growth · H1 2025</span>
+        <p class="market-card-desc">UN Tourism recorded 10.7% international visitation growth across Asia-Pacific in H1 2025. Russia led Pattaya arrivals in 2024, with Indian and Chinese markets growing rapidly — all key IHG loyalty segments.</p>
+      </div>
+      <div class="market-card">
+        <span class="market-card-icon">🔄</span>
+        <span class="market-card-val">Rebrand</span>
+        <span class="market-card-label">Industry Mega-Trend</span>
+        <p class="market-card-desc">Across APAC, operators are rebranding existing hotels rather than building new ones due to high construction costs. Conversion to Holiday Inn delivers rate premiums without greenfield risk. IHG's global network of 100M+ members drives immediate RevPAR uplift.</p>
+      </div>
+      <div class="market-card">
+        <span class="market-card-icon">💰</span>
+        <span class="market-card-val">฿5,873</span>
+        <span class="market-card-label">Luxury ADR Benchmark · Thailand 2024</span>
+        <p class="market-card-desc">Thailand's luxury hotel segment achieved ฿5,873 ADR in 2024 — illustrating the rate ceiling available to well-positioned, branded assets on Pratumnak Hill as the neighbourhood continues to attract premium investment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRENT PERFORMANCE -->
+<section style="background:var(--navy-mid);padding:80px 48px;">
+  <div class="section-inner">
+    <span class="section-label">Current Performance vs. Market</span>
+    <h2 class="section-title">The Value Gap: Today vs. Tomorrow</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">Current performance metrics (RGI &lt;1, MPI &lt;1, ARI &lt;1) confirm the property is significantly under-indexed against its competitive set — presenting exceptional upside for a new owner who can deploy brand power and capital.</p>
+
+    <div class="chart-wrap">
+      <div class="chart-title">Key Performance Comparison — Current vs. Stabilised Post-Rebranding</div>
+      <div class="bar-chart">
+        <!-- ADR -->
+        <div class="bar-group">
+          <div class="bar-pair">
+            <div class="bar before" style="height:37%"><span class="bar-label-top" style="color:#aaa">฿1,500</span></div>
+            <div class="bar after" style="height:100%"><span class="bar-label-top" style="color:var(--gold)">฿4,043</span></div>
+          </div>
+          <div class="bar-group-label">ADR</div>
+        </div>
+        <!-- OCC -->
+        <div class="bar-group">
+          <div class="bar-pair">
+            <div class="bar before" style="height:87%"><span class="bar-label-top" style="color:#aaa">70%</span></div>
+            <div class="bar after" style="height:100%"><span class="bar-label-top" style="color:var(--gold)">80%</span></div>
+          </div>
+          <div class="bar-group-label">OCCUPANCY</div>
+        </div>
+        <!-- RevPAR -->
+        <div class="bar-group">
+          <div class="bar-pair">
+            <div class="bar before" style="height:32%"><span class="bar-label-top" style="color:#aaa">฿1,050</span></div>
+            <div class="bar after" style="height:100%"><span class="bar-label-top" style="color:var(--gold)">฿3,234</span></div>
+          </div>
+          <div class="bar-group-label">RevPAR</div>
+        </div>
+        <!-- Revenue -->
+        <div class="bar-group">
+          <div class="bar-pair">
+            <div class="bar before" style="height:32%"><span class="bar-label-top" style="color:#aaa">฿158M</span></div>
+            <div class="bar after" style="height:100%"><span class="bar-label-top" style="color:var(--gold)">฿493M</span></div>
+          </div>
+          <div class="bar-group-label">REVENUE</div>
+        </div>
+        <!-- NOI -->
+        <div class="bar-group">
+          <div class="bar-pair">
+            <div class="bar before" style="height:19%"><span class="bar-label-top" style="color:#aaa">~฿24M</span></div>
+            <div class="bar after" style="height:100%"><span class="bar-label-top" style="color:var(--gold)">฿198M</span></div>
+          </div>
+          <div class="bar-group-label">NOI</div>
+        </div>
+      </div>
+      <div class="chart-legend">
+        <div class="legend-item"><div class="legend-dot ld-before"></div>Current (Unbranded)</div>
+        <div class="legend-item"><div class="legend-dot ld-after"></div>Stabilised (Holiday Inn · Year 3+)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER REPOSITION -->
+<section class="reposition-section" id="reposition">
+  <div class="section-inner">
+    <span class="section-label">Repositioning Strategy</span>
+    <h2 class="section-title">From Independent 4-Star<br/>to Holiday Inn by IHG</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">
+      Holiday Inn by IHG is the optimal flag for this asset. With 100M+ IHG One Rewards members, established MICE penetration, proven Thailand conversions, and brand-standard rooms already within reach via targeted CAPEX, the path to a 3× revenue transformation is clear.
+    </p>
+
+    <div class="before-after">
+      <!-- BEFORE -->
+      <div class="ba-col ba-before">
+        <div class="ba-header">⚠ BEFORE — Mountain Beach Resort (Independent)</div>
+        <div class="ba-body">
+          <div class="ba-metric"><span class="ba-metric-name">Brand / Flag</span><span class="ba-metric-val" style="color:#e57373">Unbranded Independent</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Star Rating</span><span class="ba-metric-val" style="color:#e57373">4-Star (Soft)</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">ADR</span><span class="ba-metric-val" style="color:#e57373">฿1,500</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Occupancy</span><span class="ba-metric-val" style="color:#e57373">70%</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">RevPAR</span><span class="ba-metric-val" style="color:#e57373">~฿1,050</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Revenue</span><span class="ba-metric-val" style="color:#e57373">฿158 Million</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">NOI</span><span class="ba-metric-val" style="color:#e57373">~฿24 Million</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">RGI / MPI / ARI</span><span class="ba-metric-val" style="color:#e57373">All &lt;1.0 (Under-indexed)</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Distribution</span><span class="ba-metric-val" style="color:#e57373">OTA-Dependent</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Loyalty Programme</span><span class="ba-metric-val" style="color:#e57373">None</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">MICE Penetration</span><span class="ba-metric-val" style="color:#e57373">Low</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Market Position</span><span class="ba-metric-val" style="color:#e57373">Lagging Compset</span></div>
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="ba-divider">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div class="ba-arrow">→</div>
+          <div class="ba-label" style="position:static">REBRAND</div>
+        </div>
+      </div>
+
+      <!-- AFTER -->
+      <div class="ba-col ba-after">
+        <div class="ba-header">✦ AFTER — Holiday Inn by IHG (Stabilised Year 3+)</div>
+        <div class="ba-body">
+          <div class="ba-metric"><span class="ba-metric-name">Brand / Flag</span><span class="ba-metric-val" style="color:var(--lime)">Holiday Inn by IHG</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Star Rating</span><span class="ba-metric-val" style="color:var(--lime)">4-Star (International Standard)</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">ADR</span><span class="ba-metric-val" style="color:var(--lime)">฿4,043</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Occupancy</span><span class="ba-metric-val" style="color:var(--lime)">80%</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">RevPAR</span><span class="ba-metric-val" style="color:var(--lime)">฿3,234</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Revenue</span><span class="ba-metric-val" style="color:var(--lime)">฿493 Million</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">NOI</span><span class="ba-metric-val" style="color:var(--lime)">฿198 Million</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">RGI / MPI / ARI</span><span class="ba-metric-val" style="color:var(--lime)">All ≥1.1 (Market Leader)</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Distribution</span><span class="ba-metric-val" style="color:var(--lime)">IHG.com + GDS + OTA</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Loyalty Programme</span><span class="ba-metric-val" style="color:var(--lime)">IHG One Rewards (100M+ Members)</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">MICE Penetration</span><span class="ba-metric-val" style="color:var(--lime)">High (1,726 sqm Venue)</span></div>
+          <div class="ba-metric"><span class="ba-metric-name">Market Position</span><span class="ba-metric-val" style="color:var(--lime)">Compset Leader</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="uplift-badges">
+      <div class="uplift-badge">
+        <span class="uplift-pct">+170%</span>
+        <div class="uplift-desc">ADR Uplift (฿1,500 → ฿4,043)</div>
+      </div>
+      <div class="uplift-badge">
+        <span class="uplift-pct">+14%</span>
+        <div class="uplift-desc">Occupancy Uplift (70% → 80%)</div>
+      </div>
+      <div class="uplift-badge">
+        <span class="uplift-pct">+212%</span>
+        <div class="uplift-desc">Revenue Uplift (฿158M → ฿493M)</div>
+      </div>
+      <div class="uplift-badge">
+        <span class="uplift-pct">+725%</span>
+        <div class="uplift-desc">NOI Uplift (~฿24M → ฿198M)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCIAL MODEL -->
+<section class="finance-section" id="financials">
+  <div class="section-inner">
+    <span class="section-label">Financial Model</span>
+    <h2 class="section-title">Stabilised Operating<br/>Pro-Forma (Year 3+)</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">
+      Post-rebranding to Holiday Inn by IHG. All figures in Thai Baht (THB). Based on 318 keys, 365 operating days, stabilised occupancy of 80% and ADR of ฿4,043.
+    </p>
+
+    <div class="finance-table-wrap">
+      <table class="finance-table">
+        <thead>
+          <tr>
+            <th>Line Item</th>
+            <th class="td-right">Per Key / Night (THB)</th>
+            <th class="td-right">Annual (THB Million)</th>
+            <th class="td-right">% of Revenue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="4" style="background:rgba(201,168,76,0.05);padding:10px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">REVENUE</td></tr>
+          <tr>
+            <td class="td-bold">Rooms Revenue</td>
+            <td class="td-right td-gold">฿3,234 (RevPAR)</td>
+            <td class="td-right td-gold">฿375.7M</td>
+            <td class="td-right">76.2%</td>
+          </tr>
+          <tr>
+            <td>F&amp;B Revenue (4 Outlets)</td>
+            <td class="td-right">—</td>
+            <td class="td-right">฿79.0M</td>
+            <td class="td-right">16.0%</td>
+          </tr>
+          <tr>
+            <td>Spa / Wellness Revenue</td>
+            <td class="td-right">—</td>
+            <td class="td-right">฿19.7M</td>
+            <td class="td-right">4.0%</td>
+          </tr>
+          <tr>
+            <td>MICE / Meeting &amp; Events</td>
+            <td class="td-right">—</td>
+            <td class="td-right">฿14.8M</td>
+            <td class="td-right">3.0%</td>
+          </tr>
+          <tr>
+            <td>Other Revenue</td>
+            <td class="td-right">—</td>
+            <td class="td-right">฿3.7M</td>
+            <td class="td-right">0.8%</td>
+          </tr>
+          <tr class="tr-total">
+            <td class="td-bold">TOTAL REVENUE</td>
+            <td class="td-right td-gold">—</td>
+            <td class="td-right td-gold">฿493.0M</td>
+            <td class="td-right td-gold">100%</td>
+          </tr>
+          <tr><td colspan="4" style="background:rgba(201,168,76,0.05);padding:10px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">OPERATING EXPENSES</td></tr>
+          <tr>
+            <td>Departmental Expenses (Rooms + F&amp;B)</td>
+            <td class="td-right">—</td>
+            <td class="td-right">฿(148.0M)</td>
+            <td class="td-right">30.0%</td>
+          </tr>
+          <tr>
+            <td>Undistributed Expenses (Admin, Sales, Energy)</td>
+            <td class="td-right">—</td>
+            <td class="td-right">฿(98.6M)</td>
+            <td class="td-right">20.0%</td>
+          </tr>
+          <tr>
+            <td>IHG Royalty Fee + Marketing (5% + 3%)</td>
+            <td class="td-right">—</td>
+            <td class="td-right">฿(39.4M)</td>
+            <td class="td-right">8.0%</td>
+          </tr>
+          <tr>
+            <td>Property Tax, Insurance, FF&amp;E Reserve</td>
+            <td class="td-right">—</td>
+            <td class="td-right">฿(9.0M)</td>
+            <td class="td-right">1.8%</td>
+          </tr>
+          <tr class="tr-total">
+            <td class="td-bold">TOTAL EXPENSES</td>
+            <td class="td-right">—</td>
+            <td class="td-right" style="color:#e57373">฿(295.0M)</td>
+            <td class="td-right" style="color:#e57373">59.8%</td>
+          </tr>
+          <tr class="tr-total">
+            <td class="td-bold" style="color:var(--lime)">NET OPERATING INCOME (NOI)</td>
+            <td class="td-right">—</td>
+            <td class="td-right td-lime">฿198.0M</td>
+            <td class="td-right td-lime">40.2%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- REPLACEMENT COST -->
+    <div style="margin-top:60px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:28px;color:var(--white);margin-bottom:8px;">Indicative Replacement Cost Analysis</h3>
+      <div class="section-line"></div>
+      <div class="replace-grid">
+        <div class="replace-card">
+          <div class="replace-label">Land Cost</div>
+          <div class="replace-val"><span class="land-cost-highlight">฿60–70M / Rai</span></div>
+          <div class="replace-sub">5 Rai = Total Land Cost ฿301–351 Million</div>
+        </div>
+        <div class="replace-card">
+          <div class="replace-label">Construction Cost</div>
+          <div class="replace-val">฿60,000–63,000 / sqm</div>
+          <div class="replace-sub">19,302 sqm GFA</div>
+        </div>
+        <div class="replace-card">
+          <div class="replace-label">FF&amp;OS&amp;E</div>
+          <div class="replace-val">฿490,000–525,000 / Key</div>
+          <div class="replace-sub">318 Keys</div>
+        </div>
+        <div class="replace-card">
+          <div class="replace-label">Soft Costs</div>
+          <div class="replace-val">฿175,000 / Key</div>
+          <div class="replace-sub">Professional Fees, Approvals, Pre-Opening</div>
+        </div>
+        <div class="replace-card" style="border-color:rgba(174,234,0,0.4);">
+          <div class="replace-label">Total Build Cost</div>
+          <div class="replace-val" style="color:var(--gold)">฿1,360–1,439 Million</div>
+          <div class="replace-sub">Construction + FF&amp;OS&amp;E + Soft Costs</div>
+        </div>
+        <div class="replace-card" style="border-color:rgba(174,234,0,0.4);">
+          <div class="replace-label">Total Replacement Cost</div>
+          <div class="replace-val" style="color:var(--lime)">฿1,661–1,790 Million</div>
+          <div class="replace-sub">฿5.2–5.6M / Key · vs Asking ฿2.83M / Key</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXIT STRATEGY -->
+<section class="exit-section" id="exit">
+  <div class="section-inner">
+    <span class="section-label">Exit Strategy &amp; Returns</span>
+    <h2 class="section-title">Value Creation &amp;<br/>Exit Framework</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">
+      Multiple exit pathways exist, each supported by strong fundamentals. The combination of deep acquisition discount, brand-driven NOI expansion, and Pattaya's ongoing upscale repositioning provides exceptional risk-adjusted return potential.
+    </p>
+
+    <div class="exit-grid">
+      <div class="exit-card">
+        <div class="exit-card-title">🏷️ Acquisition Economics</div>
+        <div class="exit-rows">
+          <div class="exit-row"><span class="exit-key">Asking Price</span><span class="exit-val gold">฿900 Million</span></div>
+          <div class="exit-row"><span class="exit-key">Price per Key</span><span class="exit-val">฿2.83M / Key</span></div>
+          <div class="exit-row"><span class="exit-key">Discount to Replacement</span><span class="exit-val highlight">~47% Below Replacement</span></div>
+          <div class="exit-row"><span class="exit-key">Current Revenue Multiple</span><span class="exit-val">5.7× Current Revenue</span></div>
+          <div class="exit-row"><span class="exit-key">Stabilised Revenue Multiple</span><span class="exit-val highlight">1.8× Stabilised Revenue</span></div>
+          <div class="exit-row"><span class="exit-key">Stabilised NOI Yield on Cost</span><span class="exit-val highlight">22.0% on Acquisition Price</span></div>
+        </div>
+      </div>
+
+      <div class="exit-card">
+        <div class="exit-card-title">📈 Exit Scenario — Stabilised Asset Sale (Year 5)</div>
+        <div class="exit-rows">
+          <div class="exit-row"><span class="exit-key">Stabilised NOI (Year 3+)</span><span class="exit-val gold">฿198 Million</span></div>
+          <div class="exit-row"><span class="exit-key">Exit Cap Rate (Branded Hotel)</span><span class="exit-val">7.0%–8.0%</span></div>
+          <div class="exit-row"><span class="exit-key">Gross Exit Value (7% Cap)</span><span class="exit-val highlight">฿2,829 Million</span></div>
+          <div class="exit-row"><span class="exit-key">Gross Exit Value (8% Cap)</span><span class="exit-val highlight">฿2,475 Million</span></div>
+          <div class="exit-row"><span class="exit-key">Value Creation (vs. ฿900M)</span><span class="exit-val highlight">฿1,575–1,929 Million</span></div>
+          <div class="exit-row"><span class="exit-key">Gross Return Multiple</span><span class="exit-val highlight">2.75×–3.14× Invested Capital</span></div>
+        </div>
+      </div>
+
+      <div class="exit-card">
+        <div class="exit-card-title">🔄 Exit Scenario — Conversion / Strata Sale</div>
+        <div class="exit-rows">
+          <div class="exit-row"><span class="exit-key">Conversion Type</span><span class="exit-val">Branded Serviced Residences</span></div>
+          <div class="exit-row"><span class="exit-key">Market Rate (Pratumnak)</span><span class="exit-val gold">฿80,000–120,000 / sqm</span></div>
+          <div class="exit-row"><span class="exit-key">Saleable Area (Est.)</span><span class="exit-val">~14,000 sqm</span></div>
+          <div class="exit-row"><span class="exit-key">Gross Development Value</span><span class="exit-val highlight">฿1,120–1,680 Million</span></div>
+          <div class="exit-row"><span class="exit-key">Applicable Zones</span><span class="exit-val">Subject to EIA / Local Approvals</span></div>
+          <div class="exit-row"><span class="exit-key">Suitability</span><span class="exit-val">High — Freehold Land Title</span></div>
+        </div>
+      </div>
+
+      <div class="exit-card">
+        <div class="exit-card-title">⏱️ Indicative Investment Timeline</div>
+        <div class="exit-rows">
+          <div class="exit-row"><span class="exit-key">Year 0 — Acquisition</span><span class="exit-val gold">฿900M Close</span></div>
+          <div class="exit-row"><span class="exit-key">Year 0–1 — IHG Conversion</span><span class="exit-val">PIP Execution · Soft Ramp</span></div>
+          <div class="exit-row"><span class="exit-key">Year 1 — Holiday Inn Opens</span><span class="exit-val">Flag Launch · Brand Ramp</span></div>
+          <div class="exit-row"><span class="exit-key">Year 2 — Ramp Up</span><span class="exit-val">฿310M Revenue Target</span></div>
+          <div class="exit-row"><span class="exit-key">Year 3 — Stabilisation</span><span class="exit-val highlight">฿493M Revenue · ฿198M NOI</span></div>
+          <div class="exit-row"><span class="exit-key">Year 4–5 — Exit Window</span><span class="exit-val highlight">฿2.5–2.8B Valuation</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASKING PRICE -->
+<div class="asking-section" id="asking">
+  <div class="section-inner">
+    <div class="asking-eyebrow">Exclusive Listing · Freehold · 318 Keys · Pratumnak Hill, Pattaya</div>
+    <div class="asking-label">Total Acquisition Price</div>
+    <div class="asking-price-btn">฿ 900,000,000</div>
+    <p class="asking-note">
+      Land valued at <span class="land-cost-highlight">฿60–70M / Rai</span> — representing approximately 47% discount to indicative replacement cost of ฿1.66–1.79 Billion. Stabilised yield of 22% NOI-on-ask price.
+    </p>
+  </div>
+</div>
+
+<!-- INVESTMENT THESIS -->
+<section class="thesis-section">
+  <div class="section-inner">
+    <span class="section-label">Why Invest</span>
+    <h2 class="section-title">Six Pillars of the<br/>Investment Thesis</h2>
+    <div class="section-line"></div>
+    <div class="thesis-grid">
+      <div class="thesis-card">
+        <span class="thesis-num">01</span>
+        <div class="thesis-title">Deep Value Acquisition</div>
+        <p class="thesis-desc">Acquiring at ฿2.83M/key versus replacement cost of ฿5.2–5.6M/key — a structural margin of safety that is virtually impossible to replicate in today's construction cost environment. Building this hotel today costs nearly twice the asking price.</p>
+      </div>
+      <div class="thesis-card">
+        <span class="thesis-num">02</span>
+        <div class="thesis-title">Brand Catalyst (IHG / Holiday Inn)</div>
+        <p class="thesis-desc">IHG's 100M+ loyalty member base, global GDS connectivity, and proven Thailand conversion track record will immediately lift occupancy, ADR, and MICE revenue. Brand affiliation eliminates OTA dependency and drives direct bookings.</p>
+      </div>
+      <div class="thesis-card">
+        <span class="thesis-num">03</span>
+        <div class="thesis-title">Premium Micro-Location</div>
+        <p class="thesis-desc">Pratumnak Hill is Pattaya's most prestigious address — home to Royal Cliff (5★), InterContinental (5★), and a growing cluster of luxury mixed-use developments. The neighbourhood uplifts brand perception and supports premium rate positioning.</p>
+      </div>
+      <div class="thesis-card">
+        <span class="thesis-num">04</span>
+        <div class="thesis-title">Irreplaceable Freehold Asset</div>
+        <p class="thesis-desc">Freehold land title in one of Thailand's premier resort destinations — a vanishingly rare characteristic. Combined with 8,000 sqm of freehold land, this provides the foundation for long-term compounding value and future development optionality.</p>
+      </div>
+      <div class="thesis-card">
+        <span class="thesis-num">05</span>
+        <div class="thesis-title">EEC Infrastructure Tailwind</div>
+        <p class="thesis-desc">Eastern Economic Corridor investments, U-Tapao Airport expansion, and Pattaya's emerging MICE positioning structurally underpin corporate demand growth for the next decade — exactly the demand segment Holiday Inn captures most effectively.</p>
+      </div>
+      <div class="thesis-card">
+        <span class="thesis-num">06</span>
+        <div class="thesis-title">Multiple Exit Pathways</div>
+        <p class="thesis-desc">Investors benefit from three distinct exit routes: (1) stabilised branded hotel sale at 7–8% cap rate; (2) branded serviced residence conversion/strata sale; or (3) long-term income hold. Each pathway delivers compelling returns on the ฿900M basis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS / SOCIAL PROOF -->
+<section class="reviews-section">
+  <div class="section-inner">
+    <span class="section-label">Market Perception &amp; Guest Reviews</span>
+    <h2 class="section-title">Current Asset DNA:<br/>Solid Bones, Untapped Potential</h2>
+    <div class="section-line"></div>
+    <p class="section-desc">
+      Guest reviews consistently validate the asset's core strengths — panoramic Gulf of Siam views, large room footprints, and prime Pratumnak Hill location. These are exactly the attributes that justify premium Holiday Inn positioning. The current under-performance is management and brand-gap driven, not structural.
+    </p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <div class="review-quote">Spectacular sea views from our balcony — you can see the entire Gulf of Siam at sunrise. The location on Pratumnak Hill is absolutely unbeatable, walking distance to Cozy Beach and surrounded by 5-star resorts.</div>
+        <div class="review-author">Verified Guest — Booking.com</div>
+        <div class="review-source">Pratumnak Hill · Location Score: 8.6 / 10</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <div class="review-quote">Rooms are surprisingly spacious for the price — clearly built to a higher standard originally. The convention facilities are excellent for our corporate retreat. Just needs a brand refresh and better F&amp;B.</div>
+        <div class="review-author">Corporate Group Booker — TripAdvisor</div>
+        <div class="review-source">MICE Segment · Group Booking</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <div class="review-quote">Great value given the location — you're next door to InterContinental and Royal Cliff but paying half the price. If this property had an international brand it would easily command their rates. Huge potential.</div>
+        <div class="review-author">Experienced Traveller — Expedia</div>
+        <div class="review-source">Leisure Segment · Repeat Guest</div>
+      </div>
+    </div>
+    <div style="margin-top:32px;background:rgba(201,168,76,0.08);border:1px solid var(--glass-border);border-radius:10px;padding:24px 28px;">
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Analyst Note — Value Gap Confirmation</div>
+      <p style="font-size:14px;line-height:1.8;color:rgba(255,255,255,0.75);">
+        Guest feedback consistently confirms the property's core real estate and physical attributes are strong (location, views, room size, convention space), while flagging soft areas directly attributable to the absence of brand standards and loyalty infrastructure. This is the classic profile of a high-upside conversion candidate — where brand investment, not structural capital expenditure, drives the primary value uplift.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <span class="section-label">Exclusive Advisor</span>
+    <h2 class="section-title">Request the Full<br/>Information Memorandum</h2>
+    <div class="section-line"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-row">
+          <div class="contact-icon">👤</div>
+          <div class="contact-row-body">
+            <div class="contact-row-label">Lead Advisor</div>
+            <div class="contact-row-val">Monthon Mahakijdumrongnukul</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">📱</div>
+          <div class="contact-row-body">
+            <div class="contact-row-label">Mobile / WhatsApp</div>
+            <div class="contact-row-val">+66 80-657-8387</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-row-body">
+            <div class="contact-row-label">Email</div>
+            <div class="contact-row-val">joecollection.m@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">📍</div>
+          <div class="contact-row-body">
+            <div class="contact-row-label">Property Address</div>
+            <div class="contact-row-val">378/16 Moo 12, Nongpure Sub-District, Banglamung, Chonburi, Thailand 20150</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">🌐</div>
+          <div class="contact-row-body">
+            <div class="contact-row-label">Property Website</div>
+            <div class="contact-row-val">www.mountainbeachpattaya.com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-disclaimer">
+        <strong>Investment Summary — Joe Collection</strong><br/><br/>
+        This investment memorandum has been prepared by <strong>Joe Collection</strong> exclusively for qualified investors. The financial projections presented herein are based on stabilised operating assumptions post-rebranding to Holiday Inn by IHG and represent management estimates only.<br/><br/>
+        <strong>Key Metrics at a Glance:</strong><br/>
+        Asking Price: <strong>฿900 Million</strong> · Keys: <strong>318 (Freehold)</strong> · Stabilised Revenue: <strong>฿493M</strong> · NOI: <strong>฿198M</strong> · Discount to Replacement: <strong>~47%</strong><br/><br/>
+        All prospective purchasers are advised to conduct independent due diligence and seek appropriate legal, financial and tax advice. Market data sourced from STR, Horwath HTL, Cushman &amp; Wakefield, and Zuzu Hospitality (2024–2026).
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">JOE COLLECTION</div>
+  <div class="footer-text">Mountain Beach Resort Pattaya · Exclusive Investment Opportunity · © 2026 Joe Collection. All rights reserved. For qualified investors only.</div>
+  <div style="font-size:12px;color:rgba(255,255,255,0.3);">Pratumnak Hill · Pattaya · Thailand</div>
+</footer>
+
+</body>
+</html>
